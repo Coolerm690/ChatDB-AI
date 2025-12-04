@@ -134,6 +134,19 @@ ollama pull llama3.1
 # Avvia il server
 ollama serve
 ```
+## 🤝 Contributi
+
+Pull request benvenute! Per modifiche importanti, apri prima un issue.
+
+## ⭐ Supporta il progetto
+
+Se questo progetto ti è utile, lascia una **star** alla repository — aiuta tantissimo nella crescita del progetto! ⭐
+
+### ☕ Buy Me a Coffee
+
+Se vuoi supportare lo sviluppo, puoi offrirmi un caffè:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)]([https://www.buymeacoffee.com/<TUO_USERNAME>](https://www.paypal.com/paypalme/giuseppeitaliano1?country.x=IT&locale.x=it_IT))
 
 ### LM Studio
 1. Scarica LM Studio
