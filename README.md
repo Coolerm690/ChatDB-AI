@@ -1,36 +1,36 @@
 # ChatDB-AI Desktop
 
-Piattaforma desktop multipiattaforma (Windows + macOS) per interrogare database MySQL tramite linguaggio naturale utilizzando LLM multipli.
+A cross-platform desktop application (Windows + macOS) for querying MySQL databases using natural language powered by multiple LLM providers.
 
-## 🚀 Caratteristiche
+## 🚀 Features
 
-- **Connessione MySQL sicura** - Solo lettura, con crittografia SSL opzionale
-- **Schema Wizard** - Modellazione semantica di tabelle e colonne
-- **Chat AI** - Interroga il database con linguaggio naturale
-- **Multi-LLM** - Supporto per OpenAI, Anthropic, Perplexity, Ollama, LM Studio, llama.cpp
-- **Sicurezza** - Mascheramento dati sensibili, audit logging, storage crittografato
+- **Secure MySQL Connection** - Read-only access with optional SSL encryption
+- **Schema Wizard** - Semantic modeling of tables and columns
+- **AI Chat** - Query your database using natural language
+- **Multi-LLM Support** - OpenAI, Anthropic, Perplexity, Ollama, LM Studio, llama.cpp
+- **Security First** - Sensitive data masking, audit logging, encrypted storage
 
-## 📋 Prerequisiti
+## 📋 Prerequisites
 
 - Flutter SDK >= 3.0.0
 - Dart SDK >= 3.0.0
-- Per Windows: Visual Studio con "Desktop development with C++"
-- Per macOS: Xcode con Command Line Tools
+- For Windows: Visual Studio with "Desktop development with C++"
+- For macOS: Xcode with Command Line Tools
 
-## 🛠️ Installazione
+## 🛠️ Installation
 
-1. **Clona il repository**
+1. **Clone the repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/Coolerm690/ChatDB-AI.git
 cd ChatDB-AI
 ```
 
-2. **Installa le dipendenze**
+2. **Install dependencies**
 ```bash
 flutter pub get
 ```
 
-3. **Esegui l'applicazione**
+3. **Run the application**
 ```bash
 # Windows
 flutter run -d windows
@@ -39,7 +39,7 @@ flutter run -d windows
 flutter run -d macos
 ```
 
-4. **Build per produzione**
+4. **Build for production**
 ```bash
 # Windows
 flutter build windows --release
@@ -48,16 +48,16 @@ flutter build windows --release
 flutter build macos --release
 ```
 
-## 📁 Struttura Progetto
+## 📁 Project Structure
 
 ```
 lib/
 ├── main.dart                 # Entry point
-├── config/                   # Configurazioni app
+├── config/                   # App configurations
 │   ├── app_config.dart
 │   ├── theme_config.dart
 │   └── routes.dart
-├── models/                   # Modelli dati
+├── models/                   # Data models
 │   ├── connection_config.dart
 │   ├── table_model.dart
 │   ├── column_model.dart
@@ -82,88 +82,119 @@ lib/
 │   ├── wizard/
 │   ├── chat/
 │   └── settings/
-└── widgets/                  # Componenti riutilizzabili
+└── widgets/                  # Reusable components
     └── chat/
 ```
 
-## 🔧 Configurazione
+## 🔧 Configuration
 
-### Provider LLM
+### LLM Providers
 
-Vai in **Impostazioni > LLM Provider** e configura:
+Go to **Settings > LLM Provider** and configure:
 
 | Provider | API Key | Endpoint |
 |----------|---------|----------|
-| OpenAI | Richiesta | https://api.openai.com/v1 |
-| Anthropic | Richiesta | https://api.anthropic.com/v1 |
-| Perplexity | Richiesta | https://api.perplexity.ai |
-| Ollama | Non richiesta | http://localhost:11434 |
-| LM Studio | Non richiesta | http://localhost:1234 |
-| llama.cpp | Non richiesta | http://localhost:8080 |
+| OpenAI | Required | https://api.openai.com/v1 |
+| Anthropic | Required | https://api.anthropic.com/v1 |
+| Perplexity | Required | https://api.perplexity.ai |
+| Ollama | Not required | http://localhost:11434 |
+| LM Studio | Not required | http://localhost:1234 |
+| llama.cpp | Not required | http://localhost:8080 |
 
-### Connessione Database
+### Database Connection
 
-- Inserisci host, porta, username, password e nome database
-- Abilita SSL per connessioni sicure
-- L'applicazione usa **solo query SELECT** (read-only)
+- Enter host, port, username, password, and database name
+- Enable SSL for secure connections
+- The application uses **only SELECT queries** (read-only)
 
-## 🔒 Sicurezza
+## 🔒 Security
 
-- **Credenziali crittografate** - API keys e password salvate con:
+- **Encrypted Credentials** - API keys and passwords stored securely:
   - Windows: DPAPI
   - macOS: Keychain
-- **Query validation** - Solo SELECT, no modifiche
-- **Data masking** - Mascheramento automatico dati sensibili
-- **Audit logging** - Log completo delle operazioni
+- **Query Validation** - Only SELECT statements, no modifications
+- **Data Masking** - Automatic masking of sensitive data
+- **Audit Logging** - Complete operation logging
 
 ## 📱 Workflow
 
-1. **Connessione** - Configura la connessione MySQL
-2. **Wizard** - Seleziona e descrivi tabelle/colonne
-3. **Chat** - Fai domande in linguaggio naturale
-4. **Risultati** - Visualizza query SQL e risultati
+1. **Connection** - Configure MySQL database connection
+2. **Wizard** - Select and describe tables/columns
+3. **Chat** - Ask questions in natural language
+4. **Results** - View SQL queries and results
 
-## 🧩 Provider LLM Locali
+## 🧩 Local LLM Providers
 
 ### Ollama
 ```bash
-# Installa Ollama
-# Scarica un modello
+# Install Ollama
+# Download a model
 ollama pull llama3.1
 
-# Avvia il server
+# Start the server
 ollama serve
 ```
-## 🤝 Contributi
-
-Pull request benvenute! Per modifiche importanti, apri prima un issue.
-
-## ⭐ Supporta il progetto
-
-Se questo progetto ti è utile, lascia una **star** alla repository — aiuta tantissimo nella crescita del progetto! ⭐
-
-### ☕ Buy Me a Coffee
-
-Se vuoi supportare lo sviluppo, puoi offrirmi un caffè:
-
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.paypal.com/paypalme/giuseppeitaliano1?country.x=IT&locale.x=it_IT)
 
 ### LM Studio
-1. Scarica LM Studio
-2. Scarica un modello (es: CodeLlama, Mistral)
-3. Avvia il server locale
+1. Download LM Studio
+2. Download a model (e.g., CodeLlama, Mistral)
+3. Start the local server
 
-## 📝 Note
+## 📝 Notes
 
-- Le connessioni database sono **solo in lettura**
-- Le query vengono validate prima dell'esecuzione
-- I dati sensibili vengono mascherati nelle risposte
-- Tutte le operazioni vengono loggate per audit
+- Database connections are **read-only**
+- Queries are validated before execution
+- Sensitive data is masked in responses
+- All operations are logged for audit purposes
 
-## 📄 Licenza
+## 📄 License
 
-MIT License - Vedi [LICENSE](LICENSE) per dettagli.
+MIT License - See [LICENSE](LICENSE) for details.
 
-## 🤝 Contributi
+## 🤝 Contributing
 
-Pull request benvenute! Per modifiche importanti, apri prima un issue.
+We welcome contributions! Here's how you can help:
+
+### Ways to Contribute
+
+- 🐛 **Report bugs** - Open an issue with detailed information
+- 💡 **Suggest features** - Share your ideas for improvements
+- 📖 **Improve documentation** - Help make our docs better
+- 🔧 **Submit pull requests** - Fix bugs or implement new features
+
+### Development Guidelines
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes following the project's coding standards
+4. Test your changes thoroughly
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to your branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Code Standards
+
+- Follow Dart/Flutter conventions
+- Document public functions
+- Handle errors appropriately
+- Use Riverpod for state management
+- Write clean, maintainable code
+
+### Questions?
+
+Feel free to open an issue for any questions or discussions about contributing.
+
+## ☕ Support the Project
+
+If you find ChatDB-AI useful and want to support its development, consider buying me a coffee!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://www.paypal.com/paypalme/giuseppeitaliano1?country.x=IT&locale.x=it_IT)
+
+Your support helps maintain and improve ChatDB-AI. Thank you! 💙
+
+---
+
+Made with ❤️ by [Giuseppe Italiano](https://github.com/Coolerm690)
+## 📄 License
+
+[MIT License](LICENSE) - Free to use, modify, and distribute.
