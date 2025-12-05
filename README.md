@@ -188,7 +188,7 @@ Feel free to open an issue for any questions or discussions about contributing.
 
 If you find ChatDB-AI useful and want to support its development, consider buying me a coffee!
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://www.paypal.com/paypalme/giuseppeitaliano1?country.x=IT&locale.x=it_IT)
+[![Buy Me a Coffee](https://github.com/user-attachments/assets/0af2012e-7445-4c52-ab59-7ee9988d0729)](https://www.paypal.com/paypalme/giuseppeitaliano1?country.x=IT&locale.x=it_IT)
 
 Your support helps maintain and improve ChatDB-AI. Thank you! 💙
 
